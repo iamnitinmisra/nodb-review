@@ -12,7 +12,7 @@ class Finder extends Component {
     }
 
     componentDidMount(){
-        axios.get('http://localhost:4060/api/wild-pokemon')
+        axios.get('/api/wild-pokemon')
             .then(res => {
                 this.setState({
                     wildPokemon: res.data
@@ -25,6 +25,7 @@ class Finder extends Component {
             return <Grass 
                         key={element.id}
                         pokemon={element}
+                        catchPokemon={this.props.catchPokemon}
                         refreshFn={this.componentDidMount}
                     />
         })

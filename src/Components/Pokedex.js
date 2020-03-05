@@ -10,6 +10,8 @@ function Pokedex(props){
                 return <Pokemon 
                             key={element.id}
                             pokemon={element}
+                            saveName={props.saveName}
+                            releasePokemon={props.releasePokemon}
                         />
             })}
         </div>

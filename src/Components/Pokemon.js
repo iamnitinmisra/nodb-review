@@ -28,7 +28,12 @@ class Pokemon extends Component {
                 {this.state.isEditing ? (
                     <div>
                         <input onChange={(event) => this.handleChange(event)}/>
-                        <button onClick={this.toggleEdit}>
+                        <button
+                            onClick={() => {
+                                this.props.saveName(this.props.pokemon.id, this.state.userInput)
+                                this.toggleEdit()
+                            }}
+                        >
                             Save
                         </button>
                     </div>
@@ -41,7 +46,9 @@ class Pokemon extends Component {
                     src={this.props.pokemon.image}
                     alt={this.props.pokemon.name}
                 />
-                <button>Release</button>
+                <button
+                    onClick={() => this.props.releasePokemon(this.props.pokemon.id)}
+                >Release</button>
             </div>
         )
     }

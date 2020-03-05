@@ -10,7 +10,10 @@ class Grass extends Component{
 
     checkGrass = () => {
         if (this.state.grassClicked){
-            // Trigger post request to add pokemon to caught list
+            this.props.catchPokemon({
+                name: this.props.pokemon.name,
+                image: this.props.pokemon.sprites.front_default
+            })
             this.props.refreshFn()
             this.setState({
                 grassClicked: false
