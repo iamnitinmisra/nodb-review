@@ -1,7 +1,7 @@
 # Suggested NoDB Review Guide - Rough Draft
 
 ## Clarify Application Concept and Wireframe
-    ### Clarify Concept and Specifications
+    ### Clarify Concept and App Specifications
         - This is a Pokemon catching app
         - We will be utilizing the Pokemon API for the Pokemon data
         - Full CRUD
