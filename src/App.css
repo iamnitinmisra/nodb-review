@@ -1,17 +1,3 @@
 .App {
   text-align: center;
 }
-
-header {
-  background-color: whitesmoke;
-}
-
-.finder-box {
-  display: flex;
-  justify-content: center;
-}
-
-.grass-img {
-  width: 150px;
-  height: 150px
-}
