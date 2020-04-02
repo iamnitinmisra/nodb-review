@@ -40,7 +40,13 @@ class App extends Component {
     })
   }
 
-  releasePokemon(id) {}
+  releasePokemon(id) {
+    axios.delete(`/api/pokemon/${id}`).then(res => {
+      this.setState({
+        caughtPokemon: res.data,
+      })
+    })
+  }
 
   render() {
     return (
