@@ -2,8 +2,8 @@
   "name": "nodb-review-lecture",
   "version": "0.1.0",
   "private": true,
-  "main": "./server/index.js",
-  "proxy": "http://localhost:4060",
+  "main": "server/index.js",
+  "proxy": "http://localhost:4000",
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.5.0",
