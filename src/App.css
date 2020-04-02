@@ -3,3 +3,13 @@
 .App {
   text-align: center;
 }
+
+.header-text {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+}
+
+.finder {
+  display: flex;
+  justify-content: center;
+}

@@ -11,7 +11,15 @@ class Grass extends Component {
   checkGrass() {}
 
   render() {
-    return <div>Grass.js</div>
+    return (
+      <div>
+        {this.props.pokemon.name}
+        <img
+          alt={this.props.pokemon.name}
+          src={this.props.pokemon.sprites.front_default}
+        />
+      </div>
+    )
   }
 }
 
