@@ -9,6 +9,7 @@ class Finder extends Component {
     this.state = {
       wildPokemon: [],
     }
+    this.componentDidMount = this.componentDidMount.bind(this)
   }
 
   componentDidMount() {
@@ -24,6 +25,7 @@ class Finder extends Component {
     const wildPokemon = this.state.wildPokemon.map(pokemon => {
       return (
         <Grass
+          refreshFn={this.componentDidMount}
           key={pokemon.id}
           pokemon={pokemon}
           catchPokemon={this.props.catchPokemon}

@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import Header from './components/Header'
 import Finder from './components/Finder'
 import Pokedex from './components/Pokedex'
+import axios from 'axios'
 import './App.css'
 
 class App extends Component {
@@ -15,11 +16,29 @@ class App extends Component {
     this.releasePokemon = this.releasePokemon.bind(this)
   }
 
-  componentDidMount() {}
+  componentDidMount() {
+    axios.get('/api/pokemon').then(res => {
+      this.setState({
+        caughtPokemon: res.data,
+      })
+    })
+  }
 
-  catchPokemon(pokemon) {}
+  catchPokemon(pokemon) {
+    axios.post('/api/pokemon', pokemon).then(res => {
+      this.setState({
+        caughtPokemon: res.data,
+      })
+    })
+  }
 
-  saveName(id, newName) {}
+  saveName(id, newName) {
+    axios.put(`/api/pokemon/${id}`, { newName }).then(res => {
+      this.setState({
+        caughtPokemon: res.data,
+      })
+    })
+  }
 
   releasePokemon(id) {}
 

@@ -5,6 +5,7 @@ function Pokedex(props) {
   const pokemonList = props.caughtPokemon.map(pokemon => {
     return (
       <Pokemon
+        key={pokemon.id}
         pokemon={pokemon}
         saveName={props.saveName}
         releasePokemon={props.releasePokemon}
