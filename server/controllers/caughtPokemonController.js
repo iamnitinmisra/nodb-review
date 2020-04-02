@@ -1,5 +1,5 @@
-const pokemon = []
-let id = 0
+const pokemon = require('../dummy.json')
+let id = 1
 
 module.exports = {
   getCaughtPokemon: (req, res) => {

@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import '../App.css'
 
 class Pokemon extends Component {
   constructor() {
@@ -31,7 +32,7 @@ class Pokemon extends Component {
 
   render() {
     return (
-      <div>
+      <div className="pokemon">
         {/*
           if(this.state.isEditing === true){
             return <div>
@@ -52,7 +53,11 @@ class Pokemon extends Component {
         ) : (
           <p onDoubleClick={this.toggleEdit}>{this.props.pokemon.name}</p>
         )}
-        <img alt={this.props.pokemon.name} src={this.props.pokemon.image} />
+        <img
+          className="pokemon-image"
+          alt={this.props.pokemon.name}
+          src={this.props.pokemon.image}
+        />
         <button
           onClick={() => this.props.releasePokemon(this.props.pokemon.id)}
         >

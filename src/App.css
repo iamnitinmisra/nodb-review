@@ -2,6 +2,11 @@
 
 .App {
   text-align: center;
+  width: 100vw;
+  min-height: 100vh;
+  background-image: url('https://wallpapertag.com/wallpaper/full/c/c/b/443731-cute-pokemon-backgrounds-1920x1200-full-hd.jpg');
+  background-size: 100%;
+  background-attachment: fixed;
 }
 
 .header-text {
@@ -13,4 +18,37 @@
   display: flex;
   justify-content: center;
   margin-bottom: 25px;
+}
+
+.pokedex {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.pokedex > h2 {
+  margin: 10px 0;
+  font-size: 1.2rem;
+  text-decoration: underline;
+}
+
+.pokedex > div {
+  display: flex;
+  flex-wrap: wrap;
+  width: 80%;
+  padding: 0 10%;
+}
+
+.pokemon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+
+.pokemon-image {
+  height: 100px;
+  width: 100px;
 }
