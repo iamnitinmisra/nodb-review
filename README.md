@@ -17,7 +17,7 @@
     - Put - Give our Pokemon a nickname
     - Delete - Release our Pokemon from our Pokedex
 
-### Functionality and Wireframe
+### Functionality
 - We want a header with the Pokemon slogan across the top
 - When the app loads, we want to see three grass images below the header
 - When the grass image is clicked, a random Pokemon appears
@@ -44,6 +44,11 @@
     - Affecting our master caughtPokemon list so it will sit in App.js and be passed down to the Pokemon component via props
 - Delete - Release Pokemon from caughtPokemon list
     - Affecting our master caughtPokemon list so it will sit in App.js and be passed down to the Pokemon component via props
+
+<br />
+<br />
+<br />
+<br />
     
 ### Component Architecture / Tree
 - App.js (stateful - this.state.caughtPokemon)
@@ -53,11 +58,16 @@
     - Pokedex (functional)
         - Pokemon (stateful - this.state.editing, this.state.nickname)
 
-
+### Wireframe
 Start drawing
 <img src='./images/Capture1.PNG' />
 <img src='./images/Capture2.PNG' />
+<br />
+<br />
 When you get to the component Tree follow these steps:
+<img src='./images/Capture3.PNG' />
+<br />
+<br />
 
 1. App.js (stateful)
 ```
@@ -83,10 +93,13 @@ this.state = {
 componentDidMount(){fetch 3 random pokemon from pokeAPI GET}
 ```
 
+<br />
+<br />
+
 - connect Finder.js to Grass.js with caption ```this.state.wildPokemon.map```. 
 - We will render Grass.js using the map method in Finder.js
-- .
-- . 
+<br />
+<br />
 
 3. Grass.js (stateful)
 ```
@@ -113,11 +126,15 @@ this.props = {
     releasePokemon: fn
 }
 ```
+<br />
+<br />
+
 - connect Pokedex.js to Pokemon.js with caption ```this.state.caughtPokemon.map```. 
 - We will render Pokemon.js using the map method in Pokedex.js
-- .
-- . 
+<br />
+<br />
 6. Pokemon.js (stateful)
+
 ```
 this.props = {
     pokemon: {},
@@ -133,4 +150,5 @@ this.state = {
 toggleEdit() {toggle isEditing boolean}
 handleChange(event){change the name of the pokemon}
 ```
+
 <img src='./images/Capture3.PNG' />
